@@ -1,4 +1,4 @@
-\chapter{The Jac Programming Language}
+\chapter{Jac Language Overview and Basics}
 
 To articulate the sorcerer spells made possible by the wand that is Jaseci, I bestow upon thee, the Jac programming language. (Like the Harry Potter~\cite{harrypotter} simile there? Cool, I know ;-) )
 \par
@@ -12,11 +12,11 @@ The name Jac take was chosen for a few reasons.
 This chapter provides the full deep dive into the language. By the end, you will be fully empowerd with Jaseci wizardry and get a view into the key insights and novelty in the coding style.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Getting the Basics Out of the Way}
-First lets quickly dispense with the mundane. This section covers the standard table stakes fodder present in pretty much all languages. This stuff must be included for completeness, however you should be able to speed read this section.  If you are unable to speed read this, perhaps you should give visual basic a try.
+% \section{Getting the Basics Out of the Way}
+First lets quickly dispense with the mundane. This section covers the standard table stakes fodder present in pretty much all languages. These aspects of Jac must be covered for completeness, however you should be able to speed read this section.  If you are unable to speed read this, perhaps you should give visual basic a try.
 
-%%%%
-\subsection{The Obligatory Hello World}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{The Obligatory Hello World}
 \printfigHelloWorldBaby
 Let's begin with what has become the unofficial official starting point for any introduction to a new language, the ``hello world'' program. Thank you Canada for providing one of the most impactful contributions in computer science with ``hello world'' becoming a meme both technically and socially. We have such love for this contribution we even tag or newborns with the phrase as per Fig.~\ref{fig:hello_baby}. I digress. Lets now \gls{christen} our baby, Jaseci, with its ``Hello World'' expression.
 
@@ -27,6 +27,9 @@ Simple enough right? Well let's walk through it. What we have here is a valid Ja
 \shellout{hello_world.jac.output}
 
 And there we have the most useless program in the world. Though\dots technically this program is AI. Its not as intelligent as the machine depicted in Figure~\ref{fig:hello_baby}, but one that we can understand much better (unless you speak ``\gls{goo goo gaa gaa}'' of course). Let's move on.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Numbers, Arithmetic, and Logic}
 
 %%%%
 \subsection{Basic Arithmetic Operations}
@@ -51,8 +54,8 @@ Jac Code~\ref{jac:jac_more_arith.jac} outputs,
 Here, we can also observe that, unlike Python, whitespace does not mater whatsoever. Languages utilizing whitespace to express static scoping should be criminalized. Yeah, I said it, see Rant~\ref{rant:whitespacesucks}. Anyway, A corollary to this design decision is that every statement must end with a ``\texttt{;}''. The wonderful \texttt{;}, A nod of respect goes to \texttt{C/C++/JavaScript} for bringing this beautiful code punctuation to the masses. Of course the \texttt{;} as code punctuation was first introduced with \texttt{ALGOL 58}, but who the heck knows that language. It sounds like some kind of plant species. \Gls{bleh}. Onwards.
 
 \begin{nerd}
-    Grammar~\ref{gram:jac.g4:126:132} shows  the lines from the formal grammar for Jac that corresponds to the parsing of arithmetic.
-    \gramcoderange{jac.g4}{Jac grammar clip relevant to arithmetic}{126}{132}
+    Grammar~\ref{gram:jac.g4:129:135} shows  the lines from the formal grammar for Jac that corresponds to the parsing of arithmetic.
+    \gramcoderange{jac.g4}{Jac grammar clip relevant to arithmetic}{129}{135}
 \end{nerd}
 
 %%%%
@@ -69,8 +72,8 @@ Jac Code~\ref{jac:jac_logical.jac} presents the logical operations supported by 
 [NEED EXAMPLE FOR MEMBERSHIP OPERATIONS]
 
 \begin{nerd}
-    Grammar~\ref{gram:jac.g4:116:124} shows the lines from the formal grammar for Jac that corresponds to the parsing of comparison, logical, and membership operations.
-    \gramcoderange{jac.g4}{Jac grammar clip relevant to comparison, logic, and membership}{116}{124}
+    Grammar~\ref{gram:jac.g4:119:127} shows the lines from the formal grammar for Jac that corresponds to the parsing of comparison, logical, and membership operations.
+    \gramcoderange{jac.g4}{Jac grammar clip relevant to comparison, logic, and membership}{119}{127}
 \end{nerd}
 
 %%%%
@@ -81,8 +84,8 @@ Next, lets take a look at assignment in Jac. In contrast to equality tests of \t
 As shown in Jac Code~\ref{jac:jac_assign.jac}, there are a number of ways we can articulate an assignment. Of course we can simply set a variable equal to a particular value, however, we can go beyond that to set that assignment relative to its original value. In particular, we can use the short hand \texttt{a += 4 + 4;} to represent \texttt{a = a + 4 + 4;}. We will describe later an additional assignment type we call the copy assign. If you're simply dying of curiosity, I'll throw you a bone. This \texttt{:=} assignment only applies to nodes and edges and has the semantic of copying the member values of a node or edge as opposed to the particular node or edge a variable is pointing to. In a nutshell this assignment uses pass by value semantics vs pass by reference semantics which is default for nodes and edges.
 
 \begin{nerd}
-    Grammar~\ref{gram:jac.g4:104:112} shows the lines from the formal grammar for Jac that corresponds to the parsing of assignment operations.
-    \gramcoderange{jac.g4}{Jac grammar clip relevant to assignment}{104}{112}
+    Grammar~\ref{gram:jac.g4:107:115} shows the lines from the formal grammar for Jac that corresponds to the parsing of assignment operations.
+    \gramcoderange{jac.g4}{Jac grammar clip relevant to assignment}{107}{115}
 \end{nerd}
 
 
@@ -94,8 +97,8 @@ At this point in our discussion its important to note the precedence of operatio
 
 
 
-%%%%
-\subsection{Foreshadowing Unique Graph Operations}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Foreshadowing Unique Graph Operations}
 \jacdot{trivial}{.3}{Graph in memory for simple Hello World program (JC~\ref{jac:hello_world.jac})}
 Before we move on to more mundane basics that will continue to neutralize any kind of caffeine or methamphetamine buzz an experienced \gls{coder} might have as they read this, lets enjoy a \gls{Jaseci jolt}!
 \par
@@ -130,3 +133,10 @@ Yep, there a good bit going on here. in less than 10 lines of code we've done th
 Don't worry, I'll wait till that sinks in\dots Good? Well, if you liked that, just you wait.
 \par
 This is going to get very interesting indeed, but first,  on to more standard stuff\dots
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Strings, Lists, and Dictionaries}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Control Flow}

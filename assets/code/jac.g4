@@ -1,7 +1,6 @@
 grammar jac;
 
-/* Sentinels handle these top rules */
-start: element+ EOF;
+start: ver_label? element+ EOF;
 
 element: architype | walker;
 
@@ -11,10 +10,14 @@ architype:
 	| KW_GRAPH NAME graph_block;
 
 walker:
-	KW_WALKER NAME LBRACE attr_stmt* walk_entry_block? (
+	KW_WALKER NAME namespace_list LBRACE attr_stmt* walk_entry_block? (
 		statement
 		| walk_activity_block
 	)* walk_exit_block? RBRACE;
+
+ver_label: 'version' COLON STRING SEMI?;
+
+namespace_list: COLON NAME (COMMA NAME)* |;
 
 walk_entry_block: KW_WITH KW_ENTRY code_block;
 
@@ -43,7 +46,7 @@ has_stmt:
 
 has_assign: NAME | NAME EQ expression;
 
-/* Need to be heavily simplified */ can_stmt:
+can_stmt:
 	KW_CAN dotted_name preset_in_out? event_clause? (
 		COMMA dotted_name preset_in_out? event_clause?
 	)* SEMI

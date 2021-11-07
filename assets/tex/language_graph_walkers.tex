@@ -1,0 +1,65 @@
+\chapter{Graphs, Architypes, and Walkers in Jac}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Structure of a Jac Program}
+
+[Introduce structure of a jac program] \par
+[Specify the differnce between graph architypes, graph instantiations, and walkers]\par
+[Present simple program that utilizes the structures]\par
+[Present variations on articulating the same program]\par
+
+\begin{nerd}
+    Grammar~\ref{gram:jac.g4:3:16} shows the lines from the formal grammar for Jac that presents the high level structure of a Jac program.
+    \gramcoderange{jac.g4}{Jac grammar clip relevant to arithmetic}{3}{16}
+\end{nerd}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\pagebreak
+\par
+\jaccode{jac_simple_walker.jac}{Simple walker creating and connected nodes}
+\par
+\jacdotnw{jac_simple_walker}{.3}{Graph in memory for JC~\ref{jac:jac_simple_walker.jac}}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\pagebreak
+\par
+\jaccode{jac_named_node_edge.jac}{Creating named node types}
+\par
+\jacdotnw{jac_named_node_edge}{.3}{Graph in memory for JC~\ref{jac:jac_named_node_edge.jac}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\pagebreak
+\par
+\jaccode{jac_spawn_connect.jac}{Connecting nodes within spawn statement}
+\par
+\jacdotnw{jac_spawn_connect}{.3}{Graph in memory for JC~\ref{jac:jac_spawn_connect.jac}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\pagebreak
+\par
+\jaccode{jac_connect_chain.jac}{Chaining node connections using the connect operator}
+\par
+\jacdotnw{jac_connect_chain}{.3}{Graph in memory for JC~\ref{jac:jac_connect_chain.jac}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\pagebreak
+\par
+\jaccode{jac_walker_spawn_walker.jac}{Walkers spawning other walkers}
+\par
+\shellout{jac_walker_spawn_walker.jac.output}
+\par
+\jacdotnw{jac_walker_spawn_walker}{.3}{Graph in memory for JC~\ref{jac:jac_walker_spawn_walker.jac}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\pagebreak
+\par
+\jaccode{jac_walker_returns.jac}{Getting returned values from spawned walkers}
+\par
+\shellout{jac_walker_returns.jac.output}
+\par
+\jacdotnw{jac_walker_returns}{.3}{Graph in memory for JC~\ref{jac:jac_walker_returns.jac}}
+\par
+\jaccode{jac_walker_returns_alt.jac}{Increasing elegance by remembering spawns are expressions}

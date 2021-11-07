@@ -154,6 +154,15 @@ keywordstyle={\color{black}},%                         and format them in black
 \end{wrapfigure}
 }
 
+%DOT GRAPH BOX without wrapping
+\newcommand{\jacdotnw}[3]{\begin{figure}
+    \centering
+    \includegraphics[width=#2\linewidth, frame]{assets/dot/#1.dot.pdf}
+    \caption[]{#3}
+    \label{dot:#1}
+\end{figure}
+}
+
 %Nicer \texttt
 \usepackage{color,soul}
 \definecolor{Light}{gray}{.90}
