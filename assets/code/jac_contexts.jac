@@ -12,7 +12,14 @@ walker init {
     person2 = spawn here -[family]-> node::person;
     person1.name = "Josh"; person1.age = 32;
     person2.name = "Jane"; person2.age = 30;
-    -[friend]->[0].meeting_place = "college";
-    -[family]->[0].type = "sister";
-    std.out(--> );
+    e1 = -[friend]->.edge[0];
+    e1.meeting_place = "college";
+    e2 = -[family]->.edge[0];
+    e2.type = "sister";
+
+    std.out("Context for our people nodes:");
+    for i in -->: std.out(i.context);
+    # or, for i in -->.node: std.out(i.context);
+    std.out("\nContext for our edges to these nodes:");
+    for i in -->.edge: std.out(i.context);
 }
