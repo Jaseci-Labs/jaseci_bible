@@ -9,6 +9,7 @@
 [Specify the differnce between graph architypes, graph instantiations, and walkers]\par
 [Present simple program that utilizes the structures]\par
 [Present variations on articulating the same program]\par
+[Code blocks]\par
 
 \begin{nerd}
     Grammar~\ref{gram:jac.g4:3:16} shows the lines from the formal grammar for Jac that presents the high level structure of a Jac program.
@@ -16,7 +17,7 @@
 \end{nerd}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Walkers and Graphs as First Class Citizens}
+\section{Graphs as First Class Citizens}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \pagebreak
@@ -48,6 +49,9 @@
 \jacdotnw{jac_connect_chain}{.3}{Graph in memory for JC~\ref{jac:jac_connect_chain.jac}}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Walkers as First Class Citizens}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \pagebreak
 \par
 \jaccode{jac_walker_spawn_walker.jac}{Walkers spawning other walkers}
@@ -67,6 +71,11 @@
 \par
 \jaccode{jac_walker_returns_alt.jac}{Increasing elegance by remembering spawns are expressions}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\pagebreak
+Walkers are entry points to all valid jac programs
+\par
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Architypes and Actions}
@@ -80,3 +89,11 @@
 \shellout{jac_contexts.jac.output}
 \par
 \jacdotnw{jac_contexts}{.3}{Graph in memory for JC~\ref{jac:jac_contexts.jac}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\pagebreak
+\par
+\jaccode{jac_contexts_alt.jac}{Binding member contexts to nodes and edges
+}
+\par
+\shellout{jac_contexts_alt.jac.output}

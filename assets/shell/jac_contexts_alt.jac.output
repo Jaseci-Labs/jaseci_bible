@@ -1,7 +1,5 @@
-Context for our people nodes:
+Context for our people nodes and edges:
 {'name': 'Josh', 'age': 32, 'birthday': '', 'profession': ''}
+ {'meeting_place': 'college'}
 {'name': 'Jane', 'age': 30, 'birthday': '', 'profession': ''}
-
-Context for our edges to those people:
-{'meeting_place': 'college'}
-{'type': 'sister'}
+ {'type': 'sister'}

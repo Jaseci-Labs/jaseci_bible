@@ -20,6 +20,6 @@ walker init {
     std.out("Context for our people nodes:");
     for i in -->: std.out(i.context);
     # or, for i in -->.node: std.out(i.context);
-    std.out("\nContext for our edges to these nodes:");
+    std.out("\nContext for our edges to those people:");
     for i in -->.edge: std.out(i.context);
 }
