@@ -120,7 +120,7 @@ Walkers are entry points to all valid jac programs
 \jaccode{jac_node_act_note.jac}{Basic action with presets and event triggers
 }
 [Only nodes can have with entry/exit`' and presets]
-[can leave output in node and walker]
+[can leave output (push returns) in node and walker]
 
 %%%%%%%
 \pagebreak
@@ -133,3 +133,6 @@ Walkers are entry points to all valid jac programs
 \par
 \jaccode{jac_local_wlk_action.jac}{Walkers can have actions, and calling own actions
 }
+[here and visitor should be present everywhere]
+[here should point to wherever the walker is on at all times]
+[directly accessing variables in a nodes ability will not necesarily map to here]
