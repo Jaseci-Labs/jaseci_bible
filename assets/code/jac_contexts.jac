@@ -5,7 +5,7 @@ node person {
 }
 
 edge friend: has meeting_place;
-edge family: has type;
+edge family: has kind;
 
 walker init {
     person1 = spawn here -[friend]-> node::person;
@@ -15,7 +15,7 @@ walker init {
     e1 = -[friend]->.edge[0];
     e1.meeting_place = "college";
     e2 = -[family]->.edge[0];
-    e2.type = "sister";
+    e2.kind = "sister";
 
     std.out("Context for our people nodes:");
     for i in -->: std.out(i.context);

@@ -1,11 +1,11 @@
 node person: has name, age, birthday, profession;
 edge friend: has meeting_place;
-edge family: has type;
+edge family: has kind;
 
 walker init {
     person1 = spawn here -[friend(meeting_place = "college")] ->
         node::person(name = "Josh", age = 32);
-    person2 = spawn here -[family(type = "sister")] ->
+    person2 = spawn here -[family(kind = "sister")] ->
         node::person(name = "Jane", age = 30);
 
     std.out("Context for our people nodes and edges:");

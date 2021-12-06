@@ -5,11 +5,11 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Structure of a Jac Program}
 
- [Introduce structure of a jac program] \par
-[Specify the differnce between graph architypes, graph instantiations, and walkers]\par
-[Present simple program that utilizes the structures]\par
-[Present variations on articulating the same program]\par
-[Code blocks]\par
+\par [Introduce structure of a jac program] \par
+\par [Specify the differnce between graph architypes, graph instantiations, and walkers]\par
+\par [Present simple program that utilizes the structures]\par
+\par [Present variations on articulating the same program]\par
+\par [Code blocks]\par
 
 \begin{nerd}
     Grammar~\ref{gram:jac.g4:3:16} shows the lines from the formal grammar for Jac that presents the high level structure of a Jac program.
@@ -105,6 +105,8 @@ Walkers are entry points to all valid jac programs
 }
 \par
 \shellout{jac_copy_assign.jac.output}
+\par
+\jacdotnw{jac_copy_assign}{.5}{Graph in memory for JC~\ref{jac:jac_copy_assign.jac}}
 
 %%%%%%%
 \pagebreak
@@ -125,22 +127,25 @@ Walkers are entry points to all valid jac programs
 \jaccode{jac_preset_action.jac}{Basic action with presets and event triggers
 }
 \par
+\shellout{jac_preset_action.jac.output}
+\par
 \jaccode{jac_node_act_note.jac}{Basic action with presets and event triggers
 }
-[Only nodes can have with entry/exit`' and presets]
-[can leave output (push returns) in node and walker]
+\par [Only nodes can have with entry/exit`' and presets]
+\par [can leave output (push returns) in node and walker]
 
 %%%%%%%
 \pagebreak
 \par
 \jaccode{jac_local_action.jac}{Specifying your own actions
 }
-
+\par
+\shellout{jac_preset_action.jac.output}
 %%%%%%%
 \pagebreak
 \par
 \jaccode{jac_local_wlk_action.jac}{Walkers can have actions, and calling own actions
 }
-[here and visitor should be present everywhere]
-[here should point to wherever the walker is on at all times]
-[directly accessing variables in a nodes ability will not necesarily map to here]
+\par [here and visitor should be present everywhere]
+\par [here should point to wherever the walker is on at all times]
+\par [directly accessing variables in a nodes ability will not necesarily map to here]

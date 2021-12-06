@@ -9,7 +9,7 @@ node person {
     }
     can reset {  #<-- Could add 'with activity' for equivalent behavior
         byear="1995-01-01";
-        std.out("resetting year to 1995:", here.context);
+        std.out("resetting birth year to 1995:", here.context);
     }
 }
 
@@ -23,7 +23,7 @@ walker init {
     }
     person {
         spawn here walker::setter;
-        person1::reset(name="Joe");
+        here::reset(name="Joe");
     }
 }
 
