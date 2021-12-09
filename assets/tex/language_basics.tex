@@ -54,8 +54,8 @@ Jac Code~\ref{jac:jac_more_arith.jac} outputs,
 Here, we can also observe that, unlike Python, whitespace does not mater whatsoever. Languages utilizing whitespace to express static scoping should be criminalized. Yeah, I said it, see Rant~\ref{rant:whitespacesucks}. Anyway, A corollary to this design decision is that every statement must end with a ``\texttt{;}''. The wonderful \texttt{;}, A nod of respect goes to \texttt{C/C++/JavaScript} for bringing this beautiful code punctuation to the masses. Of course the \texttt{;} as code punctuation was first introduced with \texttt{ALGOL 58}, but who the heck knows that language. It sounds like some kind of plant species. \Gls{bleh}. Onwards.
 
 \begin{nerd}
-    Grammar~\ref{gram:jac.g4:129:135} shows  the lines from the formal grammar for Jac that corresponds to the parsing of arithmetic.
-    \gramcoderange{jac.g4}{Jac grammar clip relevant to arithmetic}{129}{135}
+    Grammar~\ref{gram:jac.g4:125:131} shows  the lines from the formal grammar for Jac that corresponds to the parsing of arithmetic.
+    \gramcoderange{jac.g4}{Jac grammar clip relevant to arithmetic}{125}{131}
 \end{nerd}
 
 %%%%
@@ -72,8 +72,8 @@ Jac Code~\ref{jac:jac_logical.jac} presents the logical operations supported by 
 [NEED EXAMPLE FOR MEMBERSHIP OPERATIONS]
 
 \begin{nerd}
-    Grammar~\ref{gram:jac.g4:119:127} shows the lines from the formal grammar for Jac that corresponds to the parsing of comparison, logical, and membership operations.
-    \gramcoderange{jac.g4}{Jac grammar clip relevant to comparison, logic, and membership}{119}{127}
+    Grammar~\ref{gram:jac.g4:117:123} shows the lines from the formal grammar for Jac that corresponds to the parsing of comparison, logical, and membership operations.
+    \gramcoderange{jac.g4}{Jac grammar clip relevant to comparison, logic, and membership}{117}{123}
 \end{nerd}
 
 %%%%
@@ -84,8 +84,8 @@ Next, lets take a look at assignment in Jac. In contrast to equality tests of \t
 As shown in Jac Code~\ref{jac:jac_assign.jac}, there are a number of ways we can articulate an assignment. Of course we can simply set a variable equal to a particular value, however, we can go beyond that to set that assignment relative to its original value. In particular, we can use the short hand \texttt{a += 4 + 4;} to represent \texttt{a = a + 4 + 4;}. We will describe later an additional assignment type we call the copy assign. If you're simply dying of curiosity, I'll throw you a bone. This \texttt{:=} assignment only applies to nodes and edges and has the semantic of copying the member values of a node or edge as opposed to the particular node or edge a variable is pointing to. In a nutshell this assignment uses pass by value semantics vs pass by reference semantics which is default for nodes and edges.
 
 \begin{nerd}
-    Grammar~\ref{gram:jac.g4:107:115} shows the lines from the formal grammar for Jac that corresponds to the parsing of assignment operations.
-    \gramcoderange{jac.g4}{Jac grammar clip relevant to assignment}{107}{115}
+    Grammar~\ref{gram:jac.g4:107:113} shows the lines from the formal grammar for Jac that corresponds to the parsing of assignment operations.
+    \gramcoderange{jac.g4}{Jac grammar clip relevant to assignment}{107}{113}
 \end{nerd}
 
 
@@ -140,3 +140,59 @@ This is going to get very interesting indeed, but first,  on to more standard st
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Control Flow}
+
+%%%%%%%
+\par
+\jaccode{jac_if.jac}{if statement
+}
+\par
+\shellout{jac_if.jac.output}
+
+%%%%%%%
+\par
+\jaccode{jac_else.jac}{else statement
+}
+\par
+\shellout{jac_else.jac.output}
+
+%%%%%%%
+\par
+\jaccode{jac_elif.jac}{elif statement
+}
+\par
+\shellout{jac_elif.jac.output}
+
+%%%%%%%
+\par
+\jaccode{jac_for.jac}{for loop
+}
+\par
+\shellout{jac_for.jac.output}
+
+%%%%%%%
+\par
+\jaccode{jac_for_list.jac}{for loop through list
+}
+\par
+\shellout{jac_for_list.jac.output}
+
+%%%%%%%
+\par
+\jaccode{jac_while.jac}{while loop
+}
+\par
+\shellout{jac_while.jac.output}
+
+%%%%%%%
+\par
+\jaccode{jac_break.jac}{break statement
+}
+\par
+\shellout{jac_break.jac.output}
+
+%%%%%%%
+\par
+\jaccode{jac_continue.jac}{continue statement
+}
+\par
+\shellout{jac_continue.jac.output}
