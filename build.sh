@@ -3,4 +3,3 @@ makeglossaries book
 bibtex book
 pdflatex book
 pdflatex book
-
