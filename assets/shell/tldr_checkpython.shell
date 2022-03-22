@@ -1,0 +1,5 @@
+haxor@linux:~$ python --version
+-bash: python: command not found
+haxor@linux:~$ python3 --version
+-bash: python3: command not found
+haxor@linux:~$ 

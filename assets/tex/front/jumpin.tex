@@ -1,4 +1,27 @@
-\chapter{Jumping Right In TLDR sytle}
-If you're the kind of haxor that doesn't want to read a book and just wants to get hacking ASAP, this chapter is for you!!
+\chapter{Jumping Right In, TLDR sytle}
+If you're the kind of haxor that doesn't want to read a book and just wants to get hacking ASAP, this chapter is for you!! This chapter will make a few assumptions. Firstly, it is assumed that you are in a linux environment and will have command of the line that takes commands. Coincidental, this is commonly referred to as the \emph{command line}. Secondly, this command line will be one that accepts linux style commands in a \texttt{bash} format. If you've never heard of bash, Google it. Thirdly and lastly, you will be using the only IDE true ninjas use, namely \texttt{VSCode}. If these conditions apply to your environment, you're good. If they don't but you use Linux, you're still good (as you're almost certainly competent enough at this stuff to be able to easily be able to make the necessary adjustments to get things working in your environment.)
+
+We start this journey from the perspective of having a fresh vanilla install of the minimal version of Ubuntu 20+. Ubuntu is a distribution or (flavor) of linux that is likely the most popular and accessible in the market. I say likely because I don't know for sure, but if it isn't I'd be shocked!
 
 \section{Installation}
+First and foremost, lets check what os we're running at the moment.
+\par
+\shellout{tldr_checkos.shell}
+Ok good, we're running Ubuntu 20.04.4 LTS as the \texttt{PRETTY\_NAME=} indicates. 
+
+Now immediately execute \texttt{sudo apt update} and \texttt{sudo apt upgrade} as two separate commands, don't ask why just do it. 
+
+\par
+Next, we need to have Python installed. Python is the programming language and runtime that Jaseci is primarily built upon. It's also the language that 99.999\% of everyone uses for AI research and products (and myriad other things). It's also my favorite as of late, well, second favorite after Jac. Lets check to see. Simply enter the command,
+\par
+\shellout{tldr_checkpython.shell}
+Some of you at this point might see a python version that is >= 3.8. If you see this you're good, you have Python installed. We don't see this in this example. That is because we have the \emph{minimal} Ubuntu. So we have to install it. 
+\par
+\shellout{tldr_installpython.shell}
+\par
+The line \texttt{sudo apt install python3 python3-pip} instructs Ubuntu to install both the \texttt{python3} package as well as the \texttt{python3-pip} package. Note in the example there is a point where it will ask you if you want to continue, just press Y and let it go. This step could take some time in principle, but we are almost there!
+
+\par
+Lets next check again that we have python installed. 
+\par
+\shellout{tldr_checkpython2.shell}
