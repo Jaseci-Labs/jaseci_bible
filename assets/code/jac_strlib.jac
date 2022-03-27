@@ -15,6 +15,7 @@ walker init {
     report a.str::is_upper;
     report a.str::is_lower;
     report a.str::is_space;
+    report '{"a": 5}'.str::load_json;
     report a.str::count('t');
     report a.str::find('i');
     report a.str::split;
