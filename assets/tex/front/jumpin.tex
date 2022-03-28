@@ -7,27 +7,27 @@ We start this journey from the perspective of having a fresh vanilla install of 
 First and foremost, lets check what os we're running at the moment.
 \par
 \shellout{tldr_checkos.shell}
-Ok good, we're running Ubuntu 20.04.4 LTS as the \texttt{PRETTY\_NAME=} indicates. 
+Ok good, we're running Ubuntu 20.04.4 LTS as the \texttt{PRETTY\_NAME=} indicates.
 
-Now immediately execute \texttt{sudo apt update} and \texttt{sudo apt upgrade} as two separate commands, don't ask why just do it. 
+Now immediately execute \texttt{sudo apt update} and \texttt{sudo apt upgrade} as two separate commands, don't ask why just do it.
 
 \subsection{Python Environment}
 \par
 Next, we need to have Python installed. Python is the programming language and runtime that Jaseci is primarily built upon. It's also the language that 99.999\% of everyone uses for AI research and products (and myriad other things). It's also my favorite as of late, well, second favorite after Jac. Lets check to see. Simply enter the command,
 \par
 \shellout{tldr_checkpython.shell}
-Some of you at this point might see a python version that is >= 3.8. If you see this you're good, you have Python installed. We don't see this in this example. That is because we have the \emph{minimal} Ubuntu. So we have to install it. 
+Some of you at this point might see a python version that is >= 3.8. If you see this you're good, you have Python installed. We don't see this in this example. That is because we have the \emph{minimal} Ubuntu. So we have to install it.
 \par
 \shellout{tldr_installpython.shell}
 \par
 The line \texttt{sudo apt install python3 python3-pip} instructs Ubuntu to install both the \texttt{python3} package as well as the \texttt{python3-pip} package. Note in the example there is a point where it will ask you if you want to continue, just press Y and let it go. This step could take some time in principle, but we are almost there!
 
 \par
-Lets next check again that we have python installed. 
+Lets next check again that we have python installed.
 \par
 \shellout{tldr_checkpython2.shell}
 
-Yes! We're in great shape, we've also checked that \texttt{pip} is install and that looks good as well. Note that we can also replace \texttt{pip} with \texttt{pip3} and everything should work as well. 
+Yes! We're in great shape, we've also checked that \texttt{pip} is install and that looks good as well. Note that we can also replace \texttt{pip} with \texttt{pip3} and everything should work as well.
 
 \subsection{Installing Jaseci}
 
@@ -37,9 +37,9 @@ Now, lets install Jaseci!
 \par
 \shellout{tldr_jsinstall.shell}
 
-TADA! We've pulled down Jaseci and are good to go! In this case we've installed Jaseci version \texttt{1.3.1.1}, your version should be at least this one but probably higher depending on when you're reading this. If its say a year after this moment that I'm writing this book and it's still 1.3.1.1, something very very wrong has happened. Indeed, if its two weeks later and nothing has changed, call 911 and report a missing person, seriously. 
+TADA! We've pulled down Jaseci and are good to go! In this case we've installed Jaseci version \texttt{1.3.1.1}, your version should be at least this one but probably higher depending on when you're reading this. If its say a year after this moment that I'm writing this book and it's still 1.3.1.1, something very very wrong has happened. Indeed, if its two weeks later and nothing has changed, call 911 and report a missing person, seriously.
 
-To validate that everything works, lets check the command line tool \texttt{jsctl} is present. \texttt{jsctl} is a command line tool that give full control and access to the Jaseci computational model. In particular, and for the sake of this chapter, we will use this tool to build and run programs, generate source for visualizing data and graphs, building artificial intelligence (AI) programs, hot loading fancy AI models, pushing implementations live to Jaseci servers and much much more. Now lets make sure we have access to this very powerful cli tool. 
+To validate that everything works, lets check the command line tool \texttt{jsctl} is present. \texttt{jsctl} is a command line tool that give full control and access to the Jaseci computational model. In particular, and for the sake of this chapter, we will use this tool to build and run programs, generate source for visualizing data and graphs, building artificial intelligence (AI) programs, hot loading fancy AI models, pushing implementations live to Jaseci servers and much much more. Now lets make sure we have access to this very powerful cli tool.
 
 \par
 \shellout{tldr_jsctlhelp.shell}
@@ -58,6 +58,32 @@ This is technically optional but... I strongly recommend you install and use VSC
 \end{figure}
 
 \par
-In VSCode, you can search for and install the Jac language extensions as per Figure~\ref{fig:vscode_jac}. As you can see, at the time I clipped this image, its quite new and doesn't really have a readme. You won't need one, it just provides syntax highlighting for \texttt{.jac} files at the moment. But it makes Jac code look beautiful, so it's a must have. 
+In VSCode, you can search for and install the Jac language extensions as per Figure~\ref{fig:vscode_jac}. As you can see, at the time I clipped this image, its quite new and doesn't really have a readme. You won't need one, it just provides syntax highlighting for \texttt{.jac} files at the moment. But it makes Jac code look beautiful, so it's a must have.
 
-\section{Coding Jac}
+\section{Coding in Jac}
+
+Jac, which is short hand for \textbf{Ja}seci \textbf{C}ode,  is a programming language designed for building programs for Jaseci. The language itself is inspired by a mixture of Javascript and Python and can be used standalone or as glue code for libraries built in other languages ecosystems. Jac is to Python, what Python is to C, what C is to assembly language for scalable sophisticated applications running in the cloud. In this section, we'll cover basics to advanced assuming no programming experience. Though we'll try to cover everything from first time coders to pros, we'll move fast through some of the rudimentary concepts so have your Google ready if you need to drill in a bit more of some of the basic programming concepts. Lets Jump in!
+
+\subsection{Jac Basics}
+
+Launch VSCode, spool up a terminal window, and lets tinker with an example.
+\par
+\jaccode{tldr_hello.jac}{First Example}
+Output:
+\shellout{tldr_hello.jac.output}
+
+Jac Code~\ref{jac:tldr_hello.jac} shows a simple program example that shows a number of various language features.
+
+[Types example]
+
+\subsection{Graphs in Jac}
+[Bringing Graphs in with special operators]
+
+[Walking Graphs]
+
+[Compute into the Nodes]
+
+\subsection{AI}
+
+[Adding some AI]
+
