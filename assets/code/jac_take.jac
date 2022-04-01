@@ -1,7 +1,7 @@
 node person: has name;
 
 walker get_names {
-    std.out(here.name)
+    std.out(here.name);
     take -->;
 }
 
