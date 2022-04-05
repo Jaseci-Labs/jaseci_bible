@@ -63,27 +63,27 @@
             \toprule
             \textbf{Op}               & \textbf{Args}                                 & \textbf{Description}                                                                                                   \\
             \midrule
-            \texttt{.str::upper}      & none                                          &                                                                                                                        \\
-            \texttt{.str::lower}      & none                                          &                                                                                                                        \\
-            \texttt{.str::title}      & none                                          &                                                                                                                        \\
-            \texttt{.str::capitalize} & none                                          &                                                                                                                        \\
-            \texttt{.str::swap\_case} & none                                          &                                                                                                                        \\
-            \texttt{.str::is\_alnum}  & none                                          &                                                                                                                        \\
-            \texttt{.str::is\_digit}  & none                                          &                                                                                                                        \\
-            \texttt{.str::is\_title}  & none                                          &                                                                                                                        \\
-            \texttt{.str::is\_upper}  & none                                          &                                                                                                                        \\
-            \texttt{.str::is\_lower}  & none                                          &                                                                                                                        \\
-            \texttt{.str::is\_space}  & none                                          &                                                                                                                        \\
-            \texttt{.str::load\_json} & none                                          &                                                                                                                        \\
-            \texttt{.str::count}      & (\textbf{substr}, start, end) & Returns the number of occurrences of a substring in the given string. Start and end specify range of indices to search \\
-            \texttt{.str::find}       &   (\textbf{substr}, start, end)                                             &    Returns the index of first occurrence of the substring (if found). If not found, it returns -1. Start and end specify range of indices to search.                                                                                                                   \\
-            \texttt{.str::split}      & \emph{optional} (separator, maxsplit)                                     &   Breaks up a string at the specified separator for maxsplit number of times and returns a list of strings. Default separators is ` ' and maxsplit is unlimited.                                                                                                                   \\
-            \texttt{.str::startswith} &                                               &                                                                                                                        \\
-            \texttt{.str::endswith}   &                                               &                                                                                                                        \\
-            \texttt{.str::replace}    &                                               &                                                                                                                        \\
-            \texttt{.str::strip}      & optional,                                     &                                                                                                                        \\
-            \texttt{.str::lstrip}     & optional,                                     &                                                                                                                        \\
-            \texttt{.str::rstrip}     & optional,                                     &                                                                                                                        \\
+            \lstinline{.str::upper}      & none                                          &                                                                                                                        \\
+            \lstinline{.str::lower}      & none                                          &                                                                                                                        \\
+            \lstinline{.str::title}      & none                                          &                                                                                                                        \\
+            \lstinline{.str::capitalize} & none                                          &                                                                                                                        \\
+            \lstinline{.str::swap\_case} & none                                          &                                                                                                                        \\
+            \lstinline{.str::is\_alnum}  & none                                          &                                                                                                                        \\
+            \lstinline{.str::is\_digit}  & none                                          &                                                                                                                        \\
+            \lstinline{.str::is\_title}  & none                                          &                                                                                                                        \\
+            \lstinline{.str::is\_upper}  & none                                          &                                                                                                                        \\
+            \lstinline{.str::is\_lower}  & none                                          &                                                                                                                        \\
+            \lstinline{.str::is\_space}  & none                                          &                                                                                                                        \\
+            \lstinline{.str::load\_json} & none                                          &                                                                                                                        \\
+            \lstinline{.str::count}      & (\textbf{substr}, start, end) & Returns the number of occurrences of a substring in the given string. Start and end specify range of indices to search \\
+            \lstinline{.str::find}       &   (\textbf{substr}, start, end)                                             &    Returns the index of first occurrence of the substring (if found). If not found, it returns -1. Start and end specify range of indices to search.                                                                                                                   \\
+            \lstinline{.str::split}      & \emph{optional} (separator, maxsplit)                                     &   Breaks up a string at the specified separator for maxsplit number of times and returns a list of strings. Default separators is ` ' and maxsplit is unlimited.                                                                                                                   \\
+            \lstinline{.str::startswith} &                                               &                                                                                                                        \\
+            \lstinline{.str::endswith}   &                                               &                                                                                                                        \\
+            \lstinline{.str::replace}    &                                               &                                                                                                                        \\
+            \lstinline{.str::strip}      & optional,                                     &                                                                                                                        \\
+            \lstinline{.str::lstrip}     & optional,                                     &                                                                                                                        \\
+            \lstinline{.str::rstrip}     & optional,                                     &                                                                                                                        \\
             \bottomrule
         \end{tabular}
         \caption{Complete Library of String Operations}
@@ -100,17 +100,17 @@
             \toprule
             \textbf{Op}             & \textbf{Args} & \textbf{Description} \\
             \midrule
-            \texttt{.list::copy}    & none          &                      \\
-            \texttt{.list::sort}    & none          &                      \\
-            \texttt{.list::reverse} & none          &                      \\
-            \texttt{.list::clear}   & none          &                      \\
-            \texttt{.list::pop}     & optional,     &                      \\
-            \texttt{.list::index}   &               &                      \\
-            \texttt{.list::append}  &               &                      \\
-            \texttt{.list::extend}  &               &                      \\
-            \texttt{.list::insert}  &               &                      \\
-            \texttt{.list::remove}  &               &                      \\
-            \texttt{.list::count}   &               &                      \\
+            \lstinline{.list::copy}    & none          &                      \\
+            \lstinline{.list::sort}    & none          &                      \\
+            \lstinline{.list::reverse} & none          &                      \\
+            \lstinline{.list::clear}   & none          &                      \\
+            \lstinline{.list::pop}     & optional,     &                      \\
+            \lstinline{.list::index}   &               &                      \\
+            \lstinline{.list::append}  &               &                      \\
+            \lstinline{.list::extend}  &               &                      \\
+            \lstinline{.list::insert}  &               &                      \\
+            \lstinline{.list::remove}  &               &                      \\
+            \lstinline{.list::count}   &               &                      \\
             \bottomrule
         \end{tabular}
         \caption{Precedence of operations in Jac}
@@ -127,14 +127,14 @@
             \toprule
             \textbf{Op}             & \textbf{Args} & \textbf{Description} \\
             \midrule
-            \texttt{.dict::items}   & none          &                      \\
-            \texttt{.dict::copy}    & none          &                      \\
-            \texttt{.dict::keys}    & none          &                      \\
-            \texttt{.dict::clear}   & none          &                      \\
-            \texttt{.dict::popitem} & none          &                      \\
-            \texttt{.dict::values}  & none          &                      \\
-            \texttt{.dict::pop}     &               &                      \\
-            \texttt{.dict::update}  &               &                      \\
+            \lstinline{.dict::items}   & none          &                      \\
+            \lstinline{.dict::copy}    & none          &                      \\
+            \lstinline{.dict::keys}    & none          &                      \\
+            \lstinline{.dict::clear}   & none          &                      \\
+            \lstinline{.dict::popitem} & none          &                      \\
+            \lstinline{.dict::values}  & none          &                      \\
+            \lstinline{.dict::pop}     &               &                      \\
+            \lstinline{.dict::update}  &               &                      \\
             \bottomrule
         \end{tabular}
         \caption{Precedence of operations in Jac}
