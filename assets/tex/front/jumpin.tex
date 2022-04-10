@@ -66,13 +66,22 @@ Jac, which is short hand for \textbf{Ja}seci \textbf{C}ode,  is a programming la
 
 \subsection{Jac Basics}
 
-Launch VSCode, spool up a terminal window, and lets tinker with an example.
+Launch VSCode, spool up a terminal window, and lets tinker with an example. We'll start with Jac Code~\ref{jac:tldr_hello.jac}. I'd strongly recommend you type out this example (instead of cutting and pasting) especially if this might be your first time programming or are a little rusty with Python and or Javascript. It's the best way to learn!
+
 \par
-\jaccode{tldr_hello.jac}{First Example}
+\jaccode{tldr_hello.jac}{Example program introducing basic syntax.}
+
+This first example Jac Code~\ref{jac:tldr_hello.jac} shows a simple program example demonstrating a number of basic language features. Firstly, observe that the first three assignments in the program to \texttt{x}, \texttt{y}, and \texttt{z} does not specify any types indicating that Jac is a \gls{dynamically typed language}. This means the types are inferred from the assignment of variables, and these types can change dynamically as new assignments are applied to the same variables. This feature is designed to work almost exactly like the dynamic typing in Python.
+
+\par
+Next we find a conditional statement much like any other language. Do note operators like the Python inspired \texttt{or} is supported along side the C/C++/Javascript \texttt{||} operator. Other such operators include \texttt{and} (\texttt{\&\&}), \texttt{not} (\texttt{!}), etc.
+
+\par
+After the conditional we have a library call \texttt{std.out(x)}. This call prints the value of x to the screen. \texttt{std.out} in Jac is equivalent to the the \texttt{print} in Python and analogous to the \texttt{printf}, \texttt{cout}, and \texttt{console.log} you'd find in C, C++, and Javascript respectively. A suite of core standard library operations for the language has the preamble of \texttt{std}.
+
 Output:
 \shellout{tldr_hello.jac.output}
 
-Jac Code~\ref{jac:tldr_hello.jac} shows a simple program example that shows a number of various language features.
 
 \subsection{Types in Jac}
 [Types example]
