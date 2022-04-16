@@ -133,7 +133,7 @@ Output:
 Output:
 \shellout{tldr_test.jac.output}
 
-\section{Jac Haxor Workflow}
+\section{Jac Hacking Workflow}
 In this section, we discuss a typical workflow and organization of a Jac coding project. To this end, we will be creating a simple toy chatbot project and examine it's file organization and development workflow. First, lets take a look at the files for this project.
 \par
 \shellout{tldr_wf_ls.shell}
@@ -172,11 +172,29 @@ Now lets take a look a what each of these files represent:
 \subsection{Building to JIR}
 
 \section{AI with Jaseci Kit}
+
+
+
 \subsection{Installing Jaseci Kit}
+\par
+\shellout{tldr_jskitinstall.shell}
+
+\subsection{Loading Actions from Jaseci Kit}
+\par
+\shellout{tldr_defaultactions.shell}
+
+\par
+\shellout{tldr_loaduseqa.shell}
+
+\par
+\shellout{tldr_actionsloaded.shell}
+\subsection{Using AI in Jac}
 [Adding some AI]
-\jaccode{tldr_ai.jac}{First Example}
+\jaccode{tldr_ai.jac}{Universal Sentence Encoding QA in Jac}
 Output:
 \shellout{tldr_ai.jac.output}
+
+\section{Jaseci Web Server}
 
 \section{Deploying Jaseci}
 
