@@ -1,6 +1,6 @@
 \chapter{Abstrations of Jaseci}
 \section{Graphs, the Friend that Never Gets Invited to the Party}
-There's something quite strange that has happend with our \gls{common languages} over the years, ...decades. When you look at it, almost every data structure we programmers use to solve problems can be modeled formally as a graph, or a special case of a graph, (save perhaps hash tables). Think about it, stacks, lists, queues, trees, heaps, and yes, even graphs, can be modeled with graphs. But, low and behold, no common language ustilizes the formal semantics of a graph as its first order abstraction for data or memory. I mean, isn't it a bit odd that practically every data structure covered in the language-agnostic classic foundational work \textit{Introduction to Algorithms}~\cite{intro_to_algo} can most naturally be be reasoned about as a graph, yet none of the common languages have built in and be designed around this primitive. I submit that the graph semantic is stupidly rich, very nice for us humans to reason about, and, most importantly for the purpose of Jaseci, is inherently well suited for the conceptualization and reasoning about computational problems, especially AI problems.
+There's something quite strange that has happend with our \gls{common languages} over the years, ...decades. When you look at it, almost every data structure we programmers use to solve problems can be modeled formally as a graph, or a special case of a graph, (save perhaps hash tables). Think about it, stacks, lists, queues, trees, heaps, and yes, even graphs, can be modeled with graphs. But, lo and behold, no common language utilizes the formal semantics of a graph as its first order abstraction for data or memory. I mean, isn't it a bit odd that practically every data structure covered in the language-agnostic classic foundational work \textit{Introduction to Algorithms}~\cite{intro_to_algo} can most naturally be reasoned about as a graph, yet none of the common languages have built in and be designed around this primitive? I submit that the graph semantic is stupidly rich, very nice for us humans to reason about, and, most importantly for the purpose of Jaseci, inherently well suited for the conceptualization and reasoning about computational problems, especially AI problems.
 \par
 There are a few arguments that may pop into mind at this point of my conjecture.
 \begin{itemize}
@@ -11,10 +11,10 @@ There are a few arguments that may pop into mind at this point of my conjecture.
 \par
 For the former of these two challenges, I counter with two points. First, the core design languages are always based upon their inherent abstractions. With graphs not being one such abstraction, the language's design will not be optimized to empower programmers to nimbly do gymnastics with the rich language symantics that correspond to the rich semantics graphs offer (You'll see what I mean in later chapters). And second, libraries suck (See~\ref{rant:librariessuck}).
 \par
-For the latter question, I'd respond, ``Have you SEEN the kind of abstractions in modern languages!?!? It's rediculous, lets look at python dictionaries, actually scratch that, lets keep it simple and look at dynamic typing in general. The runtime complexity to support dynamic typing is most certainly hgiher than what would be needed to support graph symantics. Duh right back at'ya!''
+For the latter question, I'd respond, ``Have you SEEN the kind of abstractions in modern languages!?!? It's ridiculous, let's look at python dictionaries, actually scratch that, let's keep it simple and look at dynamic typing in general. The runtime complexity to support dynamic typing is most certainly higher than what would be needed to support graph symantics. Duh right back at'ya!''
 \subsection{Yes, But What Kind of Graphs}
 
-There are many categories of graphs to consider when thinking about the abstractions to support in Jaseci. There are rules to be defined as to the availabe semantics of the graphs. Should all graphs be \gls{directed graphs}, should we allow the creation of \gls{undirected graphs}, what about parallel edges or \gls{multigraphs}, are those explicitly expressible or discouraged / banned, can we express \gls{hypergraphs}, and what combination of these graphical sematics should be able to be manifested and manipulated through the programming model. At this point I can feel your eyes getting droopy and your mind moving into that intermediary state between concious and sleeping, so let me cut to the answer.
+There are many categories of graphs to consider when thinking about the abstractions to support in Jaseci. There are rules to be defined as to the available semantics of the graphs. Should all graphs be \gls{directed graphs}, should we allow the creation of \gls{undirected graphs}, what about parallel edges or \gls{multigraphs}, are those explicitly expressible or discouraged / banned, can we express \gls{hypergraphs}, and what combination of these graphical semantics should be able to be manifested and manipulated through the programming model? At this point I can feel your eyes getting droopy and your mind moving into that intermediary state between conscious and sleeping, so let me cut to the answer.
 \par
 \printfigGraphTypes
 In Jaseci, we elect to assume the following semantics:
@@ -26,7 +26,7 @@ In Jaseci, we elect to assume the following semantics:
     \item No hypergraphs, as I wouldn't want Jaseci programmers heads to explode.
 
 \end{enumerate}
-\emph{As an aside, I would describe Jaseci graphs as strictly unstrict directed multigraphs that leverages the semantics of parallel edges to create a laymans `undirected edge' by shorthanding two directed edges pointed in opposite directions between the same two nodes.}
+\emph{As an aside, I would describe Jaseci graphs as strictly unstrict directed multigraphs that leverage the semantics of parallel edges to create a laymans `undirected edge' by shorthanding two directed edges pointed in opposite directions between the same two nodes.}
 \par
 \begin{nerd}
     I'd formally describe a Jaseci Graph as an $7$-tuple $(N,E,C,s,t,c_N,c_E)$, where
@@ -39,7 +39,7 @@ In Jaseci, we elect to assume the following semantics:
         \item $c_N$: $N \rightarrow C$, maps nodes to contexts
         \item $c_E$: $E \rightarrow C$, maps edges to contexts
     \end{enumerate}
-    An undriected edge can then be formed with a pair of edges $(x, y)$ if three conditions are met,
+    An undirected edge can then be formed with a pair of edges $(x, y)$ if three conditions are met,
     \begin{enumerate}
         \item $x, y \in E$
         \item $s(x) = t(y)$, and $s(y) = t(x)$
@@ -47,12 +47,12 @@ In Jaseci, we elect to assume the following semantics:
     \end{enumerate}
 \end{nerd}
 \par
-If you happend to have read that formal definition and didn't enter deep comatose you may be wondering ``Whoa, what was that context stuff that came outta nowhere! What's this guy trying to do here, sneaking a new concept in as if it was already introduced and described.''
+If you happened to have read that formal definition and didn't enter deep comatose you may be wondering ``Whoa, what was that context stuff that came outta nowhere! What's this guy trying to do here, sneaking a new concept in as if it was already introduced and described.''
 \par
-Worry not friend, lets discuss.
+Worry not friend, let's discuss.
 \subsection{Putting it All Into Context}
 
-A key principle of Jaseci is to reshape and reimagine how we view data and memory. We do so by fusing the concept of data wit the intuitive and rich semantics of graphs as the lowest level primitive to view memory.
+A key principle of Jaseci is to reshape and reimagine how we view data and memory. We do so by fusing the concept of data with the intuitive and rich semantics of graphs as the lowest level primitive to view memory.
 
 \begin{nerd}
     A context is a representation of data that can be expressed simply as a $3$-tuple $(\sum_K,\sum_V,p_K)$, where
